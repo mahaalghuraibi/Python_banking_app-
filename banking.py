@@ -13,7 +13,15 @@ class Customer:
         self.savings = savings
 
     def deposit(self, amount, account_type="checking"):
-        pass
+        if amount <= 0:
+            print("Amount must be positive")
+            return
+        if account_type == "checking":
+            self.checking += amount
+        elif account_type == "savings":
+            self.savings += amount
+        else:
+            print("Invalid account type")
 
     def withdraw(self, amount, account_type="checking"):
         pass
@@ -42,3 +50,19 @@ class CheckingAccount(Account):
 class SavingsAccount(Account):
     # حساب توفير
     pass
+
+
+
+if __name__ == "__main__":
+    c = Customer("Maha", "alghuribi", "1234", 100, 50)
+    print(c)  # قبل الإيداع
+    c.deposit(200, "checking")
+    print(c)  # بعد الإيداع
+
+
+c = Customer("Maha", "alghuribi", "1234", 100, 50)
+print(c)  
+
+# إيداع 200 في حساب التوفير
+c.deposit(200, "savings")
+print(c) 
