@@ -24,10 +24,26 @@ class Customer:
             print("Invalid account type")
 
     def withdraw(self, amount, account_type="checking"):
-        pass
+        if amount <= 0:
+            print("Amount must be positive")
+            return
+        if account_type == "checking":
+            if self.checking >= amount:
+                self.checking -= amount
+                print("Withdrawal successful!")
+            else:
+                print("Insufficient funds in checking account")
+        elif account_type == "savings":
+            if self.savings >= amount:
+                self.savings -= amount
+                print("Withdrawal successful!")
+            else:
+                print("Insufficient funds in savings account")
+        else:
+            print("Invalid account type")
 
     def transfer(self, amount, from_account="checking", to_account="savings"):
-        pass
+        pass  # لاحقًا
 
     def __str__(self):
         return f"Customer: {self.first_name} {self.last_name}, Checking: {self.checking}, Savings: {self.savings}"
@@ -38,31 +54,37 @@ class Bank:
 
 
 class Account:
-    # كلاس أساسي للحسابات
     pass
 
 
 class CheckingAccount(Account):
-    # حساب جاري
     pass
 
 
 class SavingsAccount(Account):
-    # حساب توفير
     pass
 
-
+if __name__ == "__main__":
+    # إنشاء حساب جديد
+    new_customer = Customer("Sara", "Ahmed", "sa123", 500, 200)
+    print(new_customer)
 
 if __name__ == "__main__":
     c = Customer("Maha", "alghuribi", "1234", 100, 50)
-    print(c)  # قبل الإيداع
+    print(c)
+
+    # تجربة الإيداع
     c.deposit(200, "checking")
-    print(c)  # بعد الإيداع
+    print(c)
 
+    # تجربة السحب من الجاري 
+    c.withdraw(50, "checking")
+    print(c)
 
-c = Customer("Maha", "alghuribi", "1234", 100, 50)
-print(c)  
+    # تجربة السحب من التوفير 
+    c.withdraw(30, "savings")
+    print(c)
 
-# إيداع 200 في حساب التوفير
-c.deposit(200, "savings")
-print(c) 
+    # تجربة سحب أكثر من الرصيد 
+    c.withdraw(500, "savings")
+    print(c)
