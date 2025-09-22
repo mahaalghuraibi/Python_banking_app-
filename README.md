@@ -13,9 +13,9 @@ This project simulates a banking app where customers can create accounts, deposi
 
 # Project Structure
 banking-with-python/
-│── banking.py      # main program 
-│── bank.csv        # data storage 
-│── README.md       # documentation 
+├── banking.py
+├── bank.csv
+└── README.md
 
 # Technologies Used
 - Python
