@@ -12,10 +12,12 @@ This project simulates a banking app where customers can create accounts, deposi
 - Overdraft Protection
 
 # Project Structure
+```
 banking-with-python/
 ├── banking.py
 ├── bank.csv
 └── README.md
+```
 
 # Technologies Used
 - Python
