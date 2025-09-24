@@ -186,42 +186,33 @@ class Bank:
                           initial_checking, initial_savings)
         print("Account created successfully!")
 
+    
+def main_menu(bank):
+    while True :
+        print("________________________________")
+        print("Welcome to maha Bank ")
+        print("________________________________")
+        print("1) Create a new account")
+        print("2) Login")
+        print("3) Exit")
 
-# ==========================
-# (Testing / Main)
-# ==========================
+        choice = input("Choose an option: ")
+
+        if choice == "1":
+            print(" Create a new account selected")
+            bank.add_customer_interactive()          
+            print(bank.customers)                   
+        elif choice == "2":
+            print(" Login selected")
+        elif choice == "3":
+            print("Thank you ")
+            break
+        else:
+            print(" Invalid option, please try again.")
+
+
+
 if __name__ == "__main__":
-    # إنشاء حساب جديد
-    new_customer = Customer("Sara", "Ahmed", "sa123", 500, 200)
-    print(new_customer)
 
-    # إنشاء عميل آخر
-    c = Customer("Maha", "alghuribi", "1234", 100, 50)
-    print(c)
-
-    # تجربة الإيداع
-    c.deposit(200, "checking")
-    print(c)
-
-    # تجربة السحب من الجاري 
-    c.withdraw(50, "checking")
-    print(c)
-
-    # تجربة السحب من التوفير 
-    c.withdraw(30, "savings")
-    print(c)
-
-    # تجربة سحب أكثر من الرصيد 
-    c.withdraw(500, "savings")
-    print(c)
-
-    # ==========================
-    # تجربة كلاس Bank (إنشاء عميل جديد)
-    # ==========================
-    print("\n=== Create new bank account ===")
     bank = Bank()
-    bank.add_customer_interactive()
-
-    print(bank.customers)
-
-  
+    main_menu(bank)
