@@ -60,7 +60,10 @@ banking-with-python/
 - Pushed commits to GitHub
 
 ### Day 3 (23 September 2025)
-- ...
+- Saudi National Day Holiday 🇸🇦
+
 
 ### Day 4 (24 September 2025)
-- ...
+- Built the main menu (Create / Login / Exit)
+- Linked "Create Account" to CSV save
+- Confirmed new customer is stored successfully  
