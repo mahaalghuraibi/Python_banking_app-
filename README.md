@@ -66,4 +66,6 @@ banking-with-python/
 ### Day 4 (24 September 2025)
 - Built the main menu (Create / Login / Exit)
 - Linked "Create Account" to CSV save
-- Confirmed new customer is stored successfully  
+- Confirmed new customer is stored successfully
+- Added `login(id, password)` to verify user credentials
+- Updated `Bank.__init__` to create CSV with headers if missing and load existing accounts
