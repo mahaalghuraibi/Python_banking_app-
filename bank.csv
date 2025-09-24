@@ -10,4 +10,5 @@ id,first_name,last_name,password,checking,savings,active,overdraft_count
 10009,Stacey ,Abrams,!fiuenrg,False,3452345,True,1
 100010,Jake ,Paul,wegtr,10000,-10,True,0
 100011,rtg,drg,2435365,5000,False,True,0
-100012,Devlin,Booth,123456,False,0,True,0
+100012,Devlin,Booth,123456,False,0,True,021,m,m,m,False,12,True,0
+21,maha,alghuraibi,123,12,13,True,0
