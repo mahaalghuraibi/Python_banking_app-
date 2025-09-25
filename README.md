@@ -69,3 +69,10 @@ banking-with-python/
 - Confirmed new customer is stored successfully
 - Added `login(id, password)` to verify user credentials
 - Updated `Bank.__init__` to create CSV with headers if missing and load existing accounts
+
+### Day 5 (25 September 2025)
+- Finalized the project and completed all required features
+- Verified full functionality: Create, Login, Deposit, Withdraw, Transfer, Overdraft Protection
+- Updated README with final details
+- Pushed the last commits to GitHub 
+- Project completed successfully 
